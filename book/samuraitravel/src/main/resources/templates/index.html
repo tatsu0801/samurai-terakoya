@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+ <html xmlns:th="https://www.thymeleaf.org">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">	
+         <title>書籍管理アプリ</title>
+         <link rel="stylesheet" href="style.css">	
+     </head>
+     
+     <body>
+		 <header>
+		 　<h1>書籍管理システム</h1>
+		 　<button>追加</button>
+		 </header>
+		 　<main>
+			 <p id="first-paragraph">検索</p>
+			<form>
+  　　　　　　<div>
+	            <label for="mySearch">タイトル</label>
+    　　　　　　<input
+      　　　　　　type="search"
+      　　　　　　id="mySearch"
+      　　　　　　name="q"
+      　　　　　　placeholder="タイトル検索..."
+      　　　　　　size="50" />
+    　　　　<button>検索</button>
+ 　　　　　</div>
+　　　　 </form>
+		 　　<h2>並び替え</h2>
+		 　<table>
+　　　　　 <tr>
+           <td><button>タイトル</button></td>
+           <td><button>著者</button></td>
+           <td><button>出版社</button></td>
+           </tr>
+           </table>
+  　　　　<div style="border: rgb(0, 128, 255) solid 1px; font-size: 100%; padding: 200px;">一覧表示</div>
+		 </main>
+     </body>
+ </html>
