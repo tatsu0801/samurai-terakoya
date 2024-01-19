@@ -3,14 +3,16 @@
      <head>
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">	
-         <title>書籍管理アプリ</title>
-         <link rel="stylesheet" href="style.css">	
+         <title>書籍管理アプリ ホーム（検索/一覧）</title>
+         <link rel="stylesheet" href="/css/style.css">	
      </head>
      
      <body>
 		 <header>
-		 　<h1>書籍管理システム</h1>
-		 　<button>追加</button>
+		  <div class="header">
+            <h1>書籍管理システム</h1>
+            <button id="add-button">追加</button>
+          </div>
 		 </header>
 		 　<main>
 			 <p id="first-paragraph">検索</p>
@@ -23,10 +25,10 @@
       　　　　　　name="q"
       　　　　　　placeholder="タイトル検索..."
       　　　　　　size="50" />
-    　　　　<button>検索</button>
- 　　　　　</div>
-　　　　 </form>
-		 　　<h2>並び替え</h2>
+    　　　　　　<button>検索</button>
+ 　　　　　　 </div>
+　　　　    </form>
+		 　　<p id="second-paragraph">並び替え</p>
 		 　<table>
 　　　　　 <tr>
            <td><button>タイトル</button></td>
@@ -34,7 +36,8 @@
            <td><button>出版社</button></td>
            </tr>
            </table>
-  　　　　<div style="border: rgb(0, 128, 255) solid 1px; font-size: 100%; padding: 200px;">一覧表示</div>
+  　　　　  <div class="block-list">
+ 　　　　　  </div>
 		 </main>
      </body>
  </html>

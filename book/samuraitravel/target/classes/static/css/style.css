@@ -1,3 +1,99 @@
- #first-paragraph {
-    background-color: yellow;
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin-right: auto;
+}
+
+#first-paragraph {
+	color: rgb(255, 255, 255);
+	border: 1px solid #000; /* 枠線を追加 */
+    background-color: rgb(0, 128, 255);
   }
+
+#second-paragraph {
+	color: rgb(255, 255, 255);
+	border: 1px solid #000; /* 枠線を追加 */
+    background-color: rgb(0, 128, 255);
+  }
+
+.block-list {
+  display: block; /* ブロック要素として表示 */
+  border: 1px solid #000; /* 枠線を追加 */
+  height: 800px;
+}
+
+.block-list div {
+  float: left; /* 左寄せ */
+  margin-bottom: 10px; /* アイテム間の間隔を設定 */
+}
+
+#backButton {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* 右寄せにするために指定 */
+}
+
+.update-button, .delete-button {
+  margin-right: 10px; /* ボタン間の間隔を空けるために指定 */
+}
+
+.button-container {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
+label1 {
+  margin-right: 32px;
+}
+
+label2 {
+  margin-right: 16px;
+}
+
+select {
+  margin-left: -20px;
+}
+
+.rate-form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.rate-form input[type=radio] {
+  display: none;
+}
+.rate-form label {
+  position: relative;
+  padding: 0 5px;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 35px;
+}
+.rate-form label:hover {
+  color: #ffcc00;
+}
+.rate-form label:hover ~ label {
+  color: #ffcc00;
+}
+.rate-form input[type=radio]:checked ~ label {
+  color: #ffcc00;
+}
+
+.center-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
