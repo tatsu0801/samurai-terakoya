@@ -31,11 +31,45 @@
 		 　　<p id="second-paragraph">並び替え</p>
 		 　<table>
 　　　　　 <tr>
-           <td><button>タイトル</button></td>
-           <td><button>著者</button></td>
-           <td><button>出版社</button></td>
+           <td><button id="button1">タイトル</button></td>
+           <td><button id="button2">著者</button></td>
+           <td><button id="button3">出版社</button></td>
            </tr>
            </table>
+           <script>
+			   const button1 = document.getElementById('button1');
+               const button2 = document.getElementById('button2');
+
+               // ボタン1のクリックイベントの設定
+               button1.addEventListener('click', function() {
+               // ボタン1の色を変更
+               button1.style.backgroundColor = 'blue';
+               // ボタン2の色を初期の色に戻す
+               button2.style.backgroundColor = '';
+               // ボタン3の色を初期の色に戻す
+               button3.style.backgroundColor = '';
+               });
+
+               // ボタン2のクリックイベントの設定
+               button2.addEventListener('click', function() {
+               // ボタン2の色を変更
+               button2.style.backgroundColor = 'blue';
+               // ボタン1の色を初期の色に戻す
+               button1.style.backgroundColor = '';
+               // ボタン3の色を初期の色に戻す
+               button3.style.backgroundColor = '';
+               });
+               
+               // ボタン3のクリックイベントの設定
+               button3.addEventListener('click', function() {
+               // ボタン3の色を変更
+               button3.style.backgroundColor = 'blue';
+               // ボタン2の色を初期の色に戻す
+               button2.style.backgroundColor = '';
+               // ボタン1の色を初期の色に戻す
+               button1.style.backgroundColor = '';
+               });
+            </script> 
   　　　　  <div class="block-list">
  　　　　　  </div>
 		 </main>
