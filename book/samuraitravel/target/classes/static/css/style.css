@@ -36,19 +36,21 @@ button {
   margin-bottom: 10px; /* アイテム間の間隔を設定 */
 }
 
-#backbutton {
+#backButton {
   position: fixed;
   bottom: 10px;
   left: 10px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: flex-end; /* 右寄せにするために指定 */
+#buttonContainer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
 }
 
-.update-button, .delete-button {
-  margin-right: 10px; /* ボタン間の間隔を空けるために指定 */
+#buttonContainer button {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .button-container {

@@ -55,8 +55,16 @@
           <br> 
           
           <div class="center-bottom">
-			  <button>追加</button>
+			 <button id="addButton">追加</button>
 		  </div>
+		  
+		  <script>
+			// 追加ボタンがクリックされたときの処理
+            document.getElementById("addButton").addEventListener("click", function() {
+            // 検索画面への遷移（例: index.htmlに遷移）
+            window.location.href = "http://localhost:8080/?continue";  });
+		  </script>   
+		  
         </form>                                                       
       </body>                                                              
  </html>
