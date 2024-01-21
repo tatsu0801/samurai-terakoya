@@ -14,23 +14,23 @@
             <button id="add-button">追加</button>
           </div>
 		 </header>
-		 　<main>
+		  <main>
 			 <p id="first-paragraph">検索</p>
 			<form>
-  　　　　　　<div>
+              <div>
 	            <label for="mySearch">タイトル</label>
-    　　　　　　<input
-      　　　　　　type="search"
-      　　　　　　id="mySearch"
-      　　　　　　name="q"
-      　　　　　　placeholder="タイトル検索..."
-      　　　　　　size="50" />
-    　　　　　　<button>検索</button>
- 　　　　　　 </div>
-　　　　    </form>
-		 　　<p id="second-paragraph">並び替え</p>
-		 　<table>
-　　　　　 <tr>
+                <input
+                  type="search"
+                  id="mySearch"
+                  name="q"
+                  placeholder="タイトル検索..."
+                  size="50" />
+              <button>検索</button>
+              </div>
+            </form>
+		    <p id="second-paragraph">並び替え</p>
+		   <table>
+           <tr>
            <td><button id="button1">タイトル</button></td>
            <td><button id="button2">著者</button></td>
            <td><button id="button3">出版社</button></td>
@@ -39,6 +39,7 @@
            <script>
 			   const button1 = document.getElementById('button1');
                const button2 = document.getElementById('button2');
+               const button3 = document.getElementById('button3');
 
                // ボタン1のクリックイベントの設定
                button1.addEventListener('click', function() {
@@ -69,9 +70,14 @@
                // ボタン1の色を初期の色に戻す
                button1.style.backgroundColor = '';
                });
+               
+               // 追加ボタンがクリックされたときの処理
+               document.getElementById("add-button").addEventListener("click", function() {
+               // 検索画面への遷移（例: index.htmlに遷移）
+               window.location.href = "http://localhost:8080/tsuika";  });
             </script> 
-  　　　　  <div class="block-list">
- 　　　　　  </div>
+            <div class="block-list">
+            </div>
 		 </main>
      </body>
  </html>
