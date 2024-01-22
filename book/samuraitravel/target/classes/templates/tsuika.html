@@ -62,6 +62,7 @@
 			// 追加ボタンがクリックされたときの処理
             document.getElementById("addButton").addEventListener("click", function() {
             // 検索画面への遷移（例: index.htmlに遷移）
+            event.preventDefault();
             window.location.href = "http://localhost:8080/?continue";  });
 		  </script>   
 		  
