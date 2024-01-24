@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+ <html xmlns:th="https://www.thymeleaf.org">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">	
+         <title>書籍管理アプリ ホーム（検索/一覧）</title>
+         <link rel="stylesheet" href="/css/style.css">	
+     </head>
+     
+     <body>
+		 <header>
+		  <div class="header">
+            <h1>書籍管理システム</h1>
+            <button id="add-button">追加</button>
+          </div>
+		 </header>
+		  <main>
+			 <p id="first-paragraph">検索</p>
+			<form>
+              <div>
+	            <label for="mySearch">タイトル</label>
+                <input
+                  type="search"
+                  id="mySearch"
+                  name="q"
+                  placeholder="タイトル検索..."
+                  size="50" />
+              <button>検索</button>
+              </div>
+            </form>
+		    <p id="second-paragraph">並び替え</p>
+		   <table>
+           <td><button id="button1">タイトル</button></td>
+           <td><button id="button2">著者</button></td>
+           <td><button id="button3">出版社</button></td>
+           </tr>
+           </table>
+           <script>
+			   const button1 = document.getElementById('button1');
+               const button2 = document.getElementById('button2');
+               const button3 = document.getElementById('button3');
+
+               // ボタン1のクリックイベントの設定
+               button1.addEventListener('click', function() {
+               // ボタン1の色を変更
+               button1.style.backgroundColor = 'blue';
+               // ボタン2の色を初期の色に戻す
+               button2.style.backgroundColor = '';
+               // ボタン3の色を初期の色に戻す
+               button3.style.backgroundColor = '';
+               });
+
+               // ボタン2のクリックイベントの設定
+               button2.addEventListener('click', function() {
+               // ボタン2の色を変更
+               button2.style.backgroundColor = 'blue';
+               // ボタン1の色を初期の色に戻す
+               button1.style.backgroundColor = '';
+               // ボタン3の色を初期の色に戻す
+               button3.style.backgroundColor = '';
+               });
+               
+               // ボタン3のクリックイベントの設定
+               button3.addEventListener('click', function() {
+               // ボタン3の色を変更
+               button3.style.backgroundColor = 'blue';
+               // ボタン2の色を初期の色に戻す
+               button2.style.backgroundColor = '';
+               // ボタン1の色を初期の色に戻す
+               button1.style.backgroundColor = '';
+               });
+               
+               // 追加ボタンがクリックされたときの処理
+               document.getElementById("add-button").addEventListener("click", function() {
+               // 検索画面への遷移（例: index.htmlに遷移）
+               window.location.href = "http://localhost:8080/add";  });
+            </script>
+             <div class="block-list">
+		   </div>                 
+		 </main>
+     </body>
+ </html>
