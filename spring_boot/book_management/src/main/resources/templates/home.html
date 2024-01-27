@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+ <html xmlns:th="https://www.thymeleaf.org">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">	
+         <title>書籍管理アプリ ホーム（検索/一覧）</title>
+         <link rel="stylesheet" href="/css/style.css">	
+     </head>
+     
+     <body>
+		 <header>
+		  <div class="header">
+            <h1>書籍管理システム</h1>
+            <button id="add-button">追加</button>
+          </div>
+		 </header>
+		  <main>
+			 <p id="first-paragraph">検索</p>
+			<form>
+              <div>
+	            <label for="mySearch">タイトル</label>
+                <input
+                  type="search"
+                  id="mySearch"
+                  name="q"
+                  placeholder="タイトル検索..."
+                  size="50" />
+              <button>検索</button>
+              </div>
+            </form>
+		    <p id="second-paragraph">並び替え</p>
+		   <table>
+           <td><button id="title">タイトル</button></td>
+           <td><button id="author">著者</button></td>
+           <td><button id="publisher">出版社</button></td>
+           </tr>
+           </table>
+           <script>
+			   const title = document.getElementById('title');
+               const author = document.getElementById('author');
+               const publisher = document.getElementById('publisher');
+
+               // タイトルのクリックイベントの設定
+               title.addEventListener('click', function() {
+               // タイトルの色を変更
+               title.style.backgroundColor = 'blue';
+               // 著者の色を初期の色に戻す
+               author.style.backgroundColor = '';
+               // 出版社の色を初期の色に戻す
+               publisher.style.backgroundColor = '';
+               });
+
+               // 著者のクリックイベントの設定
+               author.addEventListener('click', function() {
+               // 著者の色を変更
+               author.style.backgroundColor = 'blue';
+               // タイトルの色を初期の色に戻す
+               title.style.backgroundColor = '';
+               // 出版社の色を初期の色に戻す
+               publisher.style.backgroundColor = '';
+               });
+               
+               // ボタン3のクリックイベントの設定
+               publisher.addEventListener('click', function() {
+               // ボタン3の色を変更
+               publisher.style.backgroundColor = 'blue';
+               // 著者の色を初期の色に戻す
+               author.style.backgroundColor = '';
+               // 出版社の色を初期の色に戻す
+               title.style.backgroundColor = '';
+               });
+               
+               // 追加ボタンがクリックされたときの処理
+               document.getElementById("add-button").addEventListener("click", function() {
+               // 検索画面への遷移（例: index.htmlに遷移）
+               window.location.href = "http://localhost:8080/add";  });
+            </script>
+             <div class="block-list">
+		   </div>                 
+		 </main>
+     </body>
+ </html>

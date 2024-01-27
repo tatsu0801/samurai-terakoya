@@ -25,17 +25,6 @@ button {
   border: 1px solid #000; /* 枠線を追加 */
 }
 
-.block-list {
-  display: block; /* ブロック要素として表示 */
-  border: 1px solid #000; /* 枠線を追加 */
-  height: 800px;
-}
-
-.block-list div {
-  float: left; /* 左寄せ */
-  margin-bottom: 10px; /* アイテム間の間隔を設定 */
-}
-
 #backButton {
   position: fixed;
   bottom: 10px;
